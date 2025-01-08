@@ -3,11 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Shift</title>
+    <title>CSS Types Example</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: 'Arial', sans-serif;
+        }
+
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        p {
+            color: green;
+            font-size: 18px;
+        }
+
+        /* External CSS */
+        .box {
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            position: relative;
+        }
+
+        /* Visualization of Margin */
+        .box::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background-color: rgba(255, 0, 0, 0.2); /* Transparent red color for margin */
+            border: 2px dashed red;
+            z-index: -1;
+        }
+
+        /* Visualization of Padding */
+        .box .padding-area {
+            padding: 20px;
+            background-color: rgba(0, 255, 0, 0.2); /* Transparent green color for padding */
+            border: 2px dashed green;
+        }
+
+        /* Visualization of Border */
+        .box .border-area {
+            background-color: rgba(0, 0, 255, 0.2); /* Transparent blue color for border */
+            border: 2px dashed blue;
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>Code shift studio</h1>
-    <p>jsjsjsj</p>
+
+    <!-- Inline CSS Example -->
+    <h1 style="color: red; text-align: left;">Welcome to My Webpage</h1>
+
+    <p>This is an example demonstrating Inline, Internal, and External CSS.</p>
+
+    <h2>Table Example</h2>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Book Title</th>
+                <th>Author Name</th>
+                <th>Genre</th>
+                <th>Year Published</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>The Great Gatsby</td>
+                <td>F. Scott Fitzgerald</td>
+                <td>Fiction</td>
+                <td>1925</td>
+            </tr>
+            <tr>
+                <td>To Kill a Mockingbird</td>
+                <td>Harper Lee</td>
+                <td>Fiction</td>
+                <td>1960</td>
+            </tr>
+            <tr>
+                <td>1984</td>
+                <td>George Orwell</td>
+                <td>Dystopian</td>
+                <td>1949</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Authors List</h3>
+    <ul>
+        <li>J.K. Rowling
+            <ol>
+                <li>Harry Potter and the Philosopher's Stone</li>
+                <li>Harry Potter and the Chamber of Secrets</li>
+            </ol>
+        </li>
+        <li>George Orwell
+            <ol>
+                <li>1984</li>
+                <li>Animal Farm</li>
+            </ol>
+        </li>
+    </ul>
+
+    <!-- Form Example with External CSS -->
+    <h3>Contact Us Form</h3>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="genre">Favorite Genre:</label>
+        <select id="genre" name="genre">
+            <option value="fiction">Fiction</option>
+            <option value="nonfiction">Non-fiction</option>
+            <option value="sci-fi">Sci-Fi</option>
+            <option value="fantasy">Fantasy</option>
+        </select>
+        <br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- Explanation of Margin, Padding, and Border -->
+    <div class="box">
+        <h3>Explanation of Margin, Padding, and Border</h3>
+        
+        <div class="border-area">
+            <p><strong>Border:</strong> The border is the edge that surrounds the content of an element. It can have different styles (solid, dashed, dotted) and thickness.</p>
+        </div>
+        
+        <div class="padding-area">
+            <p><strong>Padding:</strong> The padding is the space inside the border of an element. It creates space between the content and the border.</p>
+        </div>
+        
+        <div class="box">
+            <p><strong>Margin:</strong> The margin is the space outside the border of an element. It is used to create spacing between elements.</p>
+        </div>
+    </div>
+
 </body>
 </html>
-
